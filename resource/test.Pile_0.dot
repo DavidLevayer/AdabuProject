@@ -1,10 +1,11 @@
 digraph automaton {
 	page="9,11";
 	size="9,11";
-	0 -> 1 [label="<init>()V{0=7009}"];
-	1 -> 2 [label="add(Ljava/lang/String;)Z{0=7009, 1=7012},add(Ljava/lang/String;)Z{0=7009, 1=7024}"];
-	2 -> 1 [label="clear()Z{0=7009},remove()Ljava/lang/String;{0=7009}"];
-	2 -> 2 [label="add(Ljava/lang/String;)Z{0=7009, 1=7039},remove()Ljava/lang/String;{0=7009},add(Ljava/lang/String;)Z{0=7009, 1=7035},add(Ljava/lang/String;)Z{0=7009, 1=7028},remove()Ljava/lang/String;{0=7009}"];
+	0 -> 1 [label="<init>()V{0=6694}"];
+	1 -> 1 [label="clear()Z{0=6694}"];
+	1 -> 2 [label="add(Ljava/lang/String;)Z{0=6694, 1=6704},add(Ljava/lang/String;)Z{0=6694, 1=6711}"];
+	2 -> 1 [label="remove()Ljava/lang/String;{0=6694},clear()Z{0=6694}"];
+	2 -> 2 [label="add(Ljava/lang/String;)Z{0=6694, 1=6726},remove()Ljava/lang/String;{0=6694},add(Ljava/lang/String;)Z{0=6694, 1=6722},add(Ljava/lang/String;)Z{0=6694, 1=6715},remove()Ljava/lang/String;{0=6694}"];
 	0 [label=""];
 	1 [label="st: 1,st.capacityIncrement: 0,st.elementCount: 0,st.elementData: 1,st.modCount: 0"];
 	2 [label="st: 1,st.capacityIncrement: 0,st.elementCount: 1,st.elementData: 1,st.modCount: 0"];

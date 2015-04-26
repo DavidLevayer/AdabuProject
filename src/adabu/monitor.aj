@@ -58,6 +58,8 @@ public aspect monitor {
 		}
 		
 		automate = new Automate();
+		automate.setInitialState(1);
+		automate.resetAutomata();
 		
 		try {
 			BufferedReader br = new BufferedReader(new FileReader(f));

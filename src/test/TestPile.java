@@ -4,6 +4,7 @@ public class TestPile {
 	  public static void main(String[] args) {
 	 
 		  Pile p = new Pile();
+		  p.clear();
 		  p.add("Bonjour");
 		  p.remove();
 		  p.add("Je");
