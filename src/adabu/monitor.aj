@@ -38,6 +38,7 @@ public aspect monitor {
 		}
 		
 		boolean transitionAccepted = automate.switchState(name);
+		if(transitionAccepted)
 	}
 	
 	private void initAutomata(){
