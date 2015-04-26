@@ -17,17 +17,14 @@ public class Pile {
 	 */
 	public boolean add( String elem ){
 		st.push(elem);
-		System.out.println("ADD : "+st.lastElement());
 		return true;
 	}
 	
 	public String remove(){
-		System.out.println("REMOVE : "+st.lastElement());
 		return st.pop();
 	}
 	
 	public boolean clear(){
-		System.out.println("Clear");
 		st.clear();
 		return true;
 	}
@@ -36,7 +33,7 @@ public class Pile {
 	 * Inspectors
 	 * Conditions:
 	 * 		- pas un void
-	 * 		- pas de paramètres
+	 * 		- pas de paramï¿½tres
 	 * 		- pas d'effet de bord
 	 */
 	public boolean isEmpty(){
