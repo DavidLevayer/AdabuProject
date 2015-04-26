@@ -19,6 +19,10 @@ public class Automate {
 		this.initialState = state;
 	}
 	
+	public void resetAutomata(){
+		this.currentState = initialState;
+	}
+	
 	public void addTransition(int from, int to, List<String> conditions){
 		
 		if(!stateList.contains(from))
