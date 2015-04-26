@@ -39,6 +39,14 @@ public aspect monitor {
 		
 		boolean transitionAccepted = automate.switchState(name);
 		if(transitionAccepted)
+			System.out.println("Transition: "+automate.getPreviousState()+" ("+name+") --> "+
+					automate.getCurrentState());
+		else{
+			System.out.println("Echec: "+automate.getPreviousState()+" ("+name+") --> "+
+					automate.getCurrentState());
+			activated = false;
+		}
+			
 	}
 	
 	private void initAutomata(){
