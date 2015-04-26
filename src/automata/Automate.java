@@ -8,7 +8,7 @@ public class Automate {
 	private List<Integer> stateList;
 	private List<Transition> transitionList;
 	private int initialState;
-	private int currentState;
+	private int currentState, previousState;
 	
 	public Automate(){
 		stateList = new ArrayList<Integer>();
@@ -21,6 +21,7 @@ public class Automate {
 	
 	public void resetAutomata(){
 		this.currentState = initialState;
+		this.previousState = initialState;
 	}
 	
 	public void addTransition(int from, int to, List<String> conditions){
@@ -34,16 +35,20 @@ public class Automate {
 		transitionList.add(new Transition(from, to, conditions));
 	}
 	
-	public boolean switchState(int to, String condition){
+	public boolean switchState(String condition){
 		
 		for(Transition t: transitionList){
-			if(t.from() == currentState && t.to() == to && t.containsCondition(condition)){
-				currentState = to;
+			if(t.from() == currentState && t.containsCondition(condition)){
+				previousState = currentState;
+				currentState = t.to();
 				return true;
 			}
 		}
 		return false;
 	}
+	
+	public int getCurrentState() { return currentState; }
+	public int getPreviousState(){ return previousState; }
 	
 	public class Transition {
 		private int from, to;
