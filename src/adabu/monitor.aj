@@ -37,7 +37,7 @@ public aspect monitor {
 			return;
 		}
 		
-		System.out.println("I'm in "+name);
+		boolean transitionAccepted = automate.switchState(name);
 	}
 	
 	private void initAutomata(){
